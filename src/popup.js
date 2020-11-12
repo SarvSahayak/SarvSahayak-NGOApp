@@ -6,6 +6,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
+import './styles.css'
 
 export default function FormDialog() {
     const [open, setOpen] = React.useState(false);
@@ -19,12 +21,14 @@ export default function FormDialog() {
     };
     
     return (
-        <div>
-            <Button id = "button" variant="contained" color="primary" onClick={handleClickOpen}>
+        <div id = "popup">
+            <Button id = "button" variant="contained" color="inherit" onClick={handleClickOpen}>
                 LOGIN
       </Button>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" >
-                <DialogTitle id="form-dialog-title">Login</DialogTitle>
+                <DialogTitle id="form-dialog-title" >LOGIN
+                    <LockOpenIcon style={{ fontSize: 35 }} color = "secondary" id = "icon" />
+                </DialogTitle>
                 <DialogContent>
                     <TextField
                         autoFocus

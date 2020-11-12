@@ -3,9 +3,10 @@
 }
 h1 {
     font-size: 120px;
+    font-style: oblique;
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    color: maroon;
+    color: black;
 }
 #button {
     font-size: 30px;
@@ -38,4 +39,12 @@ input {
     text-align: center;
     top: 200px;
     right: 1220px;
+}
+#form-dialog-title {
+    position: relative;
+    font-size: 40px;
+}
+#icon {
+    position: absolute;
+    right: 20px;
 }
