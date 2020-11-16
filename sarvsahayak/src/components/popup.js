@@ -4,10 +4,10 @@ import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
+// import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
-import './styles.css'
+import '../css/styles.css'
 
 export default function FormDialog() {
     const [open, setOpen] = React.useState(false);
