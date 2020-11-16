@@ -48,3 +48,8 @@ input {
     position: absolute;
     right: 20px;
 }
+.error {
+    color: red;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
