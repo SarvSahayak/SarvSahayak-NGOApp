@@ -84,6 +84,7 @@ export default function FormDialog() {
                             fullWidth
                             required
                         />
+                        <p className = "error">{emailError}</p>
                         
                         <TextField
                             margin="dense"
@@ -95,12 +96,12 @@ export default function FormDialog() {
                             fullWidth
                             required
                         />
-                        
+                        <p className = "error">{passwordError}</p>
                     </DialogContent>
                     <DialogActions>
                         <Button  color="primary" variant = "contained" onClick = {handleSubmit}>
                             Login
-                        </Button>
+                        </Button><br />
                         <p className = "error">{submitError}</p>
                     </DialogActions>
             </Dialog>

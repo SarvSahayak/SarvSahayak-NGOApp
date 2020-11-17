@@ -3,11 +3,13 @@ import { Admin, Resource } from 'react-admin'
 import restProvider from 'ra-data-simple-rest'
 import PostList from './PostList'
 import BlockList from './Blockedusers'
+import ContactList from './ContactUs'
 // import PostCreate from './components/PostCreate'
 // import PostEdit from './components/PostEdit'
 import UserList from './UserList'
 // import UserCreate from './components/UserCreate'
 import UserIcon from '@material-ui/icons/Group';
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 // import UserEdit from './components/UserEdit'
 
 function dash() {
@@ -32,6 +34,7 @@ function dash() {
         edit={UserEdit}
       /> */}
          <Resource name="blockedusers" list={BlockList} icon={UserIcon} />
+         <Resource name="Contact us" list={ContactList} icon={ContactSupportIcon}/>
     </Admin>
   )
 }
