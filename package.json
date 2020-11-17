@@ -13,11 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^5.3.0",
-    "content-range": "^1.1.1",
-    "json-server": "^0.16.2"
-  },
-  "devDependencies": {
-    "css-loader": "^5.0.1",
-    "style-loader": "^2.0.0"
+    "content-range": "^1.1.0",
+    "json-server": "^0.16.2",
+    "web-vitals": "^1.0.1"
   }
 }
