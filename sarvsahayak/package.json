@@ -5,18 +5,15 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.1",
-    "@testing-library/user-event": "^12.2.0",
-    "concurrently": "^5.3.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router": "^3.2.6",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.0",
-    "reactjs-popup": "^2.0.4",
-    "web-vitals": "^0.2.4"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "ra-data-simple-rest": "^3.9.1",
+    "react": "^16.13.1",
+    "react-admin": "^3.9.2",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,10 +22,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
