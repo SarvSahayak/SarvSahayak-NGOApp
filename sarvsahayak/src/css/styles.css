@@ -53,3 +53,9 @@ input {
     font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+/* div{
+    background-image: url("../photos/logo.png"), url("../photos/bg.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: 100% 30%;
+} */
