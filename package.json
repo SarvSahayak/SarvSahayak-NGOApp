@@ -15,6 +15,7 @@
     "concurrently": "^5.3.0",
     "content-range": "^1.1.0",
     "json-server": "^0.16.2",
+    "ra-data-json-server": "^3.10.1",
     "web-vitals": "^1.0.1"
   }
 }

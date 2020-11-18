@@ -11,6 +11,7 @@ import UserList from './UserList'
 import UserIcon from '@material-ui/icons/Group';
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 // import UserEdit from './components/UserEdit'
+import PostShow from "./PostShow";
 
 function dash() {
   return (
@@ -18,6 +19,7 @@ function dash() {
       <Resource
         name='messages'
         list={PostList}
+        show={PostShow} 
         // create={PostCreate}
         // edit={PostEdit}
       />

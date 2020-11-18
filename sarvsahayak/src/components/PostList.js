@@ -12,12 +12,15 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 // import Icon from '@material-ui/core/Icon';
 import BlockSharpIcon from '@material-ui/icons/BlockSharp';
+// import Show from "./PostShow"
 
 const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
   },
 }));
+
+// const postRowClick = (id, basePath, record) => record.editable ? 'edit' : 'show';
 
 const PostList = (props) => {
   const classes = useStyles();

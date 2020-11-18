@@ -2,36 +2,36 @@
   "messages": [
     {
       "id": "1",
-      "name":"sa",
-      "email":"saks@gmail.com",
+      "name": "sa",
+      "email": "saks@gmail.com",
       "title": "Post One",
-      "location":"343,sector-19",
+      "location": "343,sector-19",
       "body": "This is the post body",
       "publishedAt": "2020-10-02"
     },
     {
       "id": "2",
-      "name":"ka",
-      "email":"ks@gmail.com",
+      "name": "ka",
+      "email": "ks@gmail.com",
       "title": "Post Two",
-      "location":"343,sector-32",
+      "location": "343,sector-32",
       "body": "This is the post body",
       "publishedAt": "10-01-2020"
     },
     {
       "id": "3",
-      "name":"a",
-      "email":"akss@gmail.com",
+      "name": "a",
+      "email": "akss@gmail.com",
       "title": "Post Three",
-      "location":"3,sector-1",
+      "location": "3,sector-1",
       "body": "This is the post body",
       "publishedAt": "10-01-2020"
     },
     {
-      "name":"a",
-      "email":"aks@gmail.com",
+      "name": "a",
+      "email": "aks@gmail.com",
       "title": "Post Four",
-      "location":"33,sector-9",
+      "location": "33,sector-9",
       "body": "This is the body for post 4",
       "publishedAt": "2020-10-06",
       "id": "DdCICG7"
