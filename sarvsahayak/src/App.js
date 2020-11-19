@@ -4,8 +4,8 @@ import Main from "./components/Main.js";
 import Error from "./components/Error.js"
 // import Login from './Login';
 import Dashboard from './components/Dashboard';
-import { createBrowserHistory } from 'history'
-import { browserHistory } from "react-router";
+// import { createBrowserHistory } from 'history'
+// import { browserHistory } from "react-router";
 
 function App() {
   return (

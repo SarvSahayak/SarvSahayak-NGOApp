@@ -7,9 +7,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 // import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
-import '../css/styles.css'
-import { createBrowserHistory } from 'history'
-import { browserHistory } from "react-router";
 import data from '../data/db.json'
 
 
@@ -70,7 +67,7 @@ export default function FormDialog() {
         <div id = "popup">
             <Button id = "button" variant="contained" color="inherit" onClick={handleClickOpen}>
                 LOGIN
-      </Button>
+            </Button>
             <Dialog open={open}  aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title" >LOGIN
                     <LockOpenIcon style={{ fontSize: 35 }} color = "secondary" id = "icon" />
@@ -88,6 +85,7 @@ export default function FormDialog() {
                             required
                         />
                         <p className = "error">{emailError}</p>
+                        
                         <TextField
                             margin="dense"
                             id="pwd"
@@ -98,12 +96,12 @@ export default function FormDialog() {
                             fullWidth
                             required
                         />
-                        <p className="error">{passwordError}</p>
+                        <p className = "error">{passwordError}</p>
                     </DialogContent>
                     <DialogActions>
                         <Button  color="primary" variant = "contained" onClick = {handleSubmit}>
                             Login
-                        </Button>
+                        </Button><br />
                         <p className = "error">{submitError}</p>
                     </DialogActions>
             </Dialog>

@@ -1,28 +1,23 @@
-// import React from 'react'
-
-// const dash = () => {
-//     return(
-//         <h1>dashboard</h1>
-//     );   
-// }
-
-// export default dash
 import React from 'react'
-import { Admin, Resource } from 'react-admin'
+import { Admin, Resource, Title } from 'react-admin'
 import restProvider from 'ra-data-simple-rest'
 import PostList from './PostList'
 import BlockList from './Blockedusers'
+import ContactList from './ContactUs'
 // import PostCreate from './components/PostCreate'
 // import PostEdit from './components/PostEdit'
 import UserList from './UserList'
 // import UserCreate from './components/UserCreate'
 import UserIcon from '@material-ui/icons/Group';
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 // import UserEdit from './components/UserEdit'
 import PostShow from "./PostShow";
+import '../css/styles.css';
 
 function dash() {
   return (
     <Admin dataProvider={restProvider('http://localhost:3000')}>
+      <Title id= "main-title" title= "SarvSahayak"/>
       <Resource
         name='messages'
         list={PostList}
@@ -43,6 +38,7 @@ function dash() {
         edit={UserEdit}
       /> */}
          <Resource name="blockedusers" list={BlockList} icon={UserIcon} />
+         <Resource name="Contact us" list={ContactList} icon={ContactSupportIcon}/>
     </Admin>
   )
 }
