@@ -13,11 +13,11 @@ import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 // import UserEdit from './components/UserEdit'
 import PostShow from "./PostShow";
 import '../css/styles.css';
-
+// <Title id= "main-title" title= "SarvSahayak"/>
 function dash() {
   return (
     <Admin dataProvider={restProvider('http://localhost:3000')}>
-      <Title id= "main-title" title= "SarvSahayak"/>
+      
       <Resource
         name='messages'
         list={PostList}

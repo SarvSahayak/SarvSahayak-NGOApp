@@ -2,6 +2,7 @@ import { Card } from '@material-ui/core'
 import React from 'react'
 import CardContent from '@material-ui/core/CardContent';
 import { Title } from 'react-admin';
+import insta from "../photos/insta.png";
 import {
     List,
     Datagrid,
@@ -20,7 +21,9 @@ const ContactList = (props) => {
                 <h1 className = "email">Email Id</h1>
                 <p>In case of any query, feel free to contact us at</p>
                 <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=sarvsahayak@gmail.com" target="_blank" >  sarvsahayak@gmail.com</a></p>
-                <h1 className="email"> Instagram handle</h1>
+                <a href="http://www.instagram.com/sarvsahayak" target="_blank">
+                    <img id = "insta" src= {insta} alt= "SarvSahayak"/>
+                </a>
             </CardContent>
         </Card>
     )
