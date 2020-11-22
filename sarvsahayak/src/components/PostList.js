@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 // import Icon from '@material-ui/core/Icon';
 import BlockSharpIcon from '@material-ui/icons/BlockSharp';
 // import Show from "./PostShow"
+import MoreButton from './application_stats'
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -43,6 +44,7 @@ const PostList = (props) => {
         >
           Block User
       </Button>
+      <MoreButton></MoreButton>
       </Datagrid>
     </List>
   )
