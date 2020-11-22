@@ -2,7 +2,7 @@ import { Card } from '@material-ui/core'
 import React from 'react'
 import CardContent from '@material-ui/core/CardContent';
 import { Title } from 'react-admin';
-import insta from "../photos/insta.png";
+// import insta from "../photos/insta.png";
 import {
     List,
     Datagrid,
@@ -11,7 +11,7 @@ import {
     DeleteButton,
 } from 'react-admin'
 import '../css/contact.css'
-//import InstagramIcon from '@material-ui/icons/Instagram';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 const ContactList = (props) => {
     return (
@@ -22,7 +22,7 @@ const ContactList = (props) => {
                 <p>In case of any query, feel free to contact us at</p>
                 <p><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=sarvsahayak@gmail.com" target="_blank" >  sarvsahayak@gmail.com</a></p>
                 <a href="http://www.instagram.com/sarvsahayak" target="_blank">
-                    <img id = "insta" src= {insta} alt= "SarvSahayak"/>
+                    <InstagramIcon fontSize = "large"/>
                 </a>
             </CardContent>
         </Card>
