@@ -1,5 +1,5 @@
 import React from 'react'
-import { Admin, Resource, Title } from 'react-admin'
+import { Admin, Resource, Title, Logout } from 'react-admin'
 import restProvider from 'ra-data-simple-rest'
 import PostList from './PostList'
 import BlockList from './Blockedusers'
@@ -13,10 +13,12 @@ import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 // import UserEdit from './components/UserEdit'
 import PostShow from "./PostShow";
 import '../css/styles.css';
+import Main from './Main'
 // <Title id= "main-title" title= "SarvSahayak"/>
+
 function dash() {
   return (
-    <Admin dataProvider={restProvider('http://localhost:3000')}>
+    <Admin loginPage = {Main} dataProvider={restProvider('http://localhost:3000')} >
       
       <Resource
         name='messages'
