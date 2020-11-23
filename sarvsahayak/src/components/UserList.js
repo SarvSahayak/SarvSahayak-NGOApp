@@ -7,6 +7,7 @@ import {
   EditButton,
   DeleteButton,
 } from 'react-admin'
+import Main from './Main'
 
 const UserList = (props) => {
   return (
