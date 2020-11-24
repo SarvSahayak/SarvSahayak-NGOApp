@@ -72,7 +72,7 @@ import '../css/styles.css'
 
 
 const PostTitle = ({ record }) => {
-    return <span>Post {record ? `"${record.title}"` : ''}</span>;
+    return <span>Post {record ? `"${record.id}"` : ''}</span>;
 };
 
 const PostShow = (props) => (
@@ -81,7 +81,7 @@ const PostShow = (props) => (
         actions={<ApproveButton />} */}
         <SimpleShowLayout>
             <TextField source="id" />
-            <TextField source="title" />
+            <TextField label="Mobile number" source="mobile_no" />
             <RichTextField source="body" />
             <DateField label="Publication date" source="publishedAt" />  
             <img src={logo} />
