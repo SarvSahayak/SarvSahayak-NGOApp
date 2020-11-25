@@ -2,16 +2,19 @@ import * as React from "react";
 import { Show, SimpleShowLayout, TextField, DateField, RichTextField, ImageField, useMutation, useNotify, useRedirect, Button } from 'react-admin';
 import logo from "../photos/logo.png";
 import '../css/styles.css';
+import '../css/styles.css'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import BackButton from "./BackButton";
+// import { makeStyles } from '@material-ui/core/styles';
 // import Button from '@material-ui/core/Button';
 import { EditButton, TopToolbar } from 'react-admin';
 import MenuPopupState from "./statusupdate";
-
 import BlockButton from "./blockuserbutton";
 
 
-const PostTitle = ({ record }) => {
-    return <span>{record ? `${record.category}` : ''}</span>;
-};
+// const PostTitle = ({ record }) => {
+//     return <span>{record ? `${record.category}` : ''}</span>;
+// };
 
 
 
@@ -24,14 +27,20 @@ const PostTitle = ({ record }) => {
 //             console.log(">")
 //         } */}
 //         {/* <Button color="primary" onClick={update}>Custom Action</Button> */}
-
 //     </TopToolbar>
 // );
+const PostTitle = ({ record }) => {
+    return <span>
+        <BackButton><ArrowBackIcon style={{ color: 'white' }} /></BackButton>
+        Post {record ? `"${record.id}"` : ''}
+    </span>;
+};
+
+
 const PostShowActions = () => (
     <TopToolbar>
-         <BlockButton /> 
+        <BlockButton />
         <MenuPopupState />
-       
     </TopToolbar>
 );
 const PostShow = (props) => (
@@ -48,17 +57,20 @@ const PostShow = (props) => (
         </TopToolbar> */}
         {/* actions={<ApproveButton />}    */}
 
-        <SimpleShowLayout>
-            <TextField source="id" />
-            {/* <TextField source="title" /> */}
-            <TextField source="location" />
-            <TextField label="Mobile number" source="mobile_no" />
-            <RichTextField source="body" />
-            <DateField label="Publication date" source="publishedAt" />
-            <img src={logo} />
-        </SimpleShowLayout>
+        {/* <Show title={<PostTitle />}  {...props} > */}
+            {/* actions={<PostShowActions />}
+        actions={<ApproveButton />} */}
+            <SimpleShowLayout>
+                <TextField source="id" />
+                {/* <TextField source="title" /> */}
+                <TextField source="location" />
+                <TextField label="Mobile number" source="mobile_no" />
+                <RichTextField source="body" />
+                <DateField label="Publication date" source="publishedAt" />
+                <img src={logo} />
+            </SimpleShowLayout>
 
-    </Show>
+        </Show>
 );
 
 export default PostShow;
