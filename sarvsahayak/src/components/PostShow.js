@@ -32,7 +32,7 @@ import BlockButton from "./blockuserbutton";
 const PostTitle = ({ record }) => {
     return <span>
         <BackButton><ArrowBackIcon style={{ color: 'white' }} /></BackButton>
-        Post {record ? `"${record.id}"` : ''}
+        {/* Post {record ? `"${record.id}"` : ''} */}
     </span>;
 };
 
