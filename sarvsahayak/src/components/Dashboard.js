@@ -1,5 +1,6 @@
 import React from 'react'
-import { Admin, Resource, Title, Logout } from 'react-admin'
+import { Admin, Resource, Title, Logout, Toolbar, SortButton, SelectInput } from 'react-admin'
+import { ReferenceInput } from 'react-admin';
 import restProvider from 'ra-data-simple-rest'
 import authProvider from './authProvider'
 import PostList from './PostList'
@@ -20,7 +21,6 @@ import Main from './Main'
 function dash() {
   return (
     <Admin loginPage = {Main} dataProvider={restProvider('http://localhost:3000')}>
-      
       <Resource
         name='messages'
         list={PostList}
