@@ -2,6 +2,8 @@ import * as React from "react";
 import { Show, SimpleShowLayout, TextField, DateField, RichTextField, ImageField, useMutation, useNotify, useRedirect, Button } from 'react-admin';
 import logo from "../photos/logo.png";
 import '../css/styles.css'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import BackButton from "./BackButton";
 // import { makeStyles } from '@material-ui/core/styles';
 // import Button from '@material-ui/core/Button';
 // import * as React from "react";
@@ -72,11 +74,14 @@ import '../css/styles.css'
 
 
 const PostTitle = ({ record }) => {
-    return <span>Post {record ? `"${record.id}"` : ''}</span>;
+    return <span>
+        <BackButton><ArrowBackIcon style={{ color: 'white' }}/></BackButton>
+        Post {record ? `"${record.id}"` : ''}
+    </span>;
 };
 
 const PostShow = (props) => (
-    <Show  title={<PostTitle />}  {...props}>
+    <Show title={<PostTitle />}  {...props} >
         {/* actions={<PostShowActions />}
         actions={<ApproveButton />} */}
         <SimpleShowLayout>
