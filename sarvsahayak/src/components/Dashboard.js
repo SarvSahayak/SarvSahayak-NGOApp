@@ -1,6 +1,7 @@
 import React from 'react'
 import { Admin, Resource, Title, Logout } from 'react-admin'
 import restProvider from 'ra-data-simple-rest'
+import authProvider from './authProvider'
 import PostList from './PostList'
 import BlockList from './Blockedusers'
 import ContactList from './ContactUs'
@@ -18,7 +19,7 @@ import Main from './Main'
 
 function dash() {
   return (
-    <Admin loginPage = {Main} dataProvider={restProvider('http://localhost:3000')} >
+    <Admin loginPage = {Main} dataProvider={restProvider('http://localhost:3000')}>
       
       <Resource
         name='messages'
@@ -26,7 +27,7 @@ function dash() {
         show={PostShow} 
         // create={PostCreate}
         // edit={PostEdit}
-      />
+        />
       {/* <Resource
         name='users'
         list={UserList}

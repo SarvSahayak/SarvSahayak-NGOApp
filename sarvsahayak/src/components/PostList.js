@@ -33,18 +33,19 @@ const PostList = (props) => {
         <TextField source='name' />
         <EmailField source="email" />
         <TextField source='category' />
+        <TextField source='mobile_no' />
         <TextField source="location" />
         <DateField source='publishedAt' />
         {/* <EditButton basePath='/posts' /> */}
         {/* <DeleteButton basePath='/posts' /> */}
-        <Button
+        {/* <Button
           variant="contained"
           color="secondary"
           className={classes.button}
           startIcon={<CallReceivedIcon />}
         >
           Complaint recived
-      </Button>
+      </Button> */}
       {/* <MoreButton></MoreButton> */}
       </Datagrid>
     </List>
