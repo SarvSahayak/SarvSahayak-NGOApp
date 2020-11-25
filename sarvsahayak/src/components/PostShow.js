@@ -2,7 +2,6 @@ import * as React from "react";
 import { Show, SimpleShowLayout, TextField, DateField, RichTextField, ImageField, useMutation, useNotify, useRedirect, Button } from 'react-admin';
 import logo from "../photos/logo.png";
 import '../css/styles.css';
-import '../css/styles.css'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import BackButton from "./BackButton";
 // import { makeStyles } from '@material-ui/core/styles';
@@ -29,22 +28,23 @@ import BlockButton from "./blockuserbutton";
 //         {/* <Button color="primary" onClick={update}>Custom Action</Button> */}
 //     </TopToolbar>
 // );
-const PostTitle = ({ record }) => {
-    return <span>
-        <BackButton><ArrowBackIcon style={{ color: 'white' }} /></BackButton>
-        {/* Post {record ? `"${record.id}"` : ''} */}
-    </span>;
-};
+// const PostTitle = ({ record }) => {
+//     return <span>
+//          <BackButton><ArrowBackIcon style={{ color: 'white' }} /></BackButton>
+//         {/* Post {record ? `"${record.id}"` : ''} */}
+//     </span>;
+// };
 
 
 const PostShowActions = () => (
     <TopToolbar>
+        <BackButton id="back"><ArrowBackIcon style={{ color: 'black'}}/></BackButton>
         <BlockButton />
         <MenuPopupState />
     </TopToolbar>
 );
 const PostShow = (props) => (
-    <Show title={<PostTitle />} actions={<PostShowActions />} {...props}>
+    <Show actions={<PostShowActions />} {...props}>
         {/* <TopToolbar>
              { basePath, data, resource } 
          <EditButton basePath={basePath} record={data} />

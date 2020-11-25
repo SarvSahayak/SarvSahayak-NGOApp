@@ -62,3 +62,7 @@ input {
     position: absolute;
     left: 680px;
 }
+#back {
+    position: absolute;
+    right: 1040px;
+}

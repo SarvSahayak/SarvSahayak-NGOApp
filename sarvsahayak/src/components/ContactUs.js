@@ -15,17 +15,11 @@ import {
 import '../css/contact.css'
 import InstagramIcon from '@material-ui/icons/Instagram';
 
-const ContactTitle = () => {
-    return <span>
-        <BackButton><ArrowBackIcon style={{ color: 'white' }} /></BackButton>
-        Contact us
-    </span>;
-};
 
 const ContactList = (props) => {
     return(
         <Card>
-            <Title title= {<ContactTitle />} />
+            <Title title= "Contact us" />
             <CardContent>
                 <h1 className = "email">Email Id</h1>
                 <p>In case of any query, feel free to contact us at</p>

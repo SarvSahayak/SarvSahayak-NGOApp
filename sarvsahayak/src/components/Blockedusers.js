@@ -9,16 +9,9 @@ import {
 import BackButton from "./BackButton";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
-const BlockedUserTitle = () => {
-  return <span>
-    <BackButton><ArrowBackIcon style={{ color: 'white' }} /></BackButton>
-        Blocked Users
-    </span>;
-};
-
 const BlockList = (props) => {
   return (
-    <List {...props} title={< BlockedUserTitle />} >
+    <List {...props} >
       <Datagrid rowClick="show">
         <TextField source='id' />
         <TextField source='name' />
