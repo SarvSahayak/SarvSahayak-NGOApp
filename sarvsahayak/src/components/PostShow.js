@@ -72,7 +72,7 @@ import '../css/styles.css'
 
 
 const PostTitle = ({ record }) => {
-    return <span>Post {record ? `"${record.title}"` : ''}</span>;
+    return <span>{record ? `${record.title}` : ''}</span>;
 };
 
 const PostShow = (props) => (
@@ -82,6 +82,7 @@ const PostShow = (props) => (
         <SimpleShowLayout>
             <TextField source="id" />
             <TextField source="title" />
+            <TextField source="location" />
             <RichTextField source="body" />
             <DateField label="Publication date" source="publishedAt" />  
             <img src={logo} />

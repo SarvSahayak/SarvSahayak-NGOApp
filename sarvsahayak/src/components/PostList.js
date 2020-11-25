@@ -13,7 +13,8 @@ import { makeStyles } from '@material-ui/core/styles';
 // import Icon from '@material-ui/core/Icon';
 import BlockSharpIcon from '@material-ui/icons/BlockSharp';
 // import Show from "./PostShow"
-import MoreButton from './application_stats'
+//import MoreButton from './application_stats'
+import CallReceivedIcon from '@material-ui/icons/CallReceived';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -31,20 +32,20 @@ const PostList = (props) => {
         <TextField source='id' />
         <TextField source='name' />
         <EmailField source="email" />
-        <TextField source='title' />
+        <TextField source='category' />
         <TextField source="location" />
         <DateField source='publishedAt' />
-        <EditButton basePath='/posts' />
+        {/* <EditButton basePath='/posts' /> */}
         {/* <DeleteButton basePath='/posts' /> */}
         <Button
           variant="contained"
           color="secondary"
           className={classes.button}
-          startIcon={<BlockSharpIcon />}
+          startIcon={<CallReceivedIcon />}
         >
-          Block User
+          Complaint recived
       </Button>
-      <MoreButton></MoreButton>
+      {/* <MoreButton></MoreButton> */}
       </Datagrid>
     </List>
   )
