@@ -15,6 +15,7 @@ import BlockSharpIcon from '@material-ui/icons/BlockSharp';
 // import Show from "./PostShow"
 //import MoreButton from './application_stats'
 import CallReceivedIcon from '@material-ui/icons/CallReceived';
+import LineChart from "./linecharts";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -27,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
 const PostList = (props) => {
   const classes = useStyles();
   return (
+    <>
+    <LineChart />
     <List {...props}>
       <Datagrid rowClick="show">
         <TextField source='id' />
@@ -49,6 +52,7 @@ const PostList = (props) => {
       {/* <MoreButton></MoreButton> */}
       </Datagrid>
     </List>
+    </>
   )
 }
 

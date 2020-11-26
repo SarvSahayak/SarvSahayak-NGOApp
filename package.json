@@ -12,11 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.0",
+    "chart.js": "^2.9.4",
     "concurrently": "^5.3.0",
     "content-range": "^1.1.0",
     "json-server": "^0.16.2",
     "material-ui-popup-state": "^1.7.0",
     "ra-data-json-server": "^3.10.1",
+    "react-chartjs-2": "^2.11.1",
     "react-router-dom": "^5.2.0",
     "react-router-redux": "^4.0.8",
     "web-vitals": "^1.0.1"
