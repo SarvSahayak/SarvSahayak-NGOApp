@@ -29,13 +29,12 @@ const PostList = (props) => {
   const classes = useStyles();
   return (
     <>
-    <LineChart />
+    
     <List {...props}>
       <Datagrid rowClick="show">
         <TextField source='id' />
         <TextField source='name' />
         <EmailField source="email" />
-        <TextField source='category' />
         <TextField source='mobile_no' />
         <TextField source="location" />
         <DateField source='publishedAt' />
@@ -52,6 +51,8 @@ const PostList = (props) => {
       {/* <MoreButton></MoreButton> */}
       </Datagrid>
     </List>
+    <br/><br/>
+      <LineChart />
     </>
   )
 }

@@ -7,8 +7,7 @@
       "mobile_no": 9876453212,
       "location": "343,sector-19",
       "body": "This is the post body",
-      "publishedAt": "2020-10-02",
-      "category": "Animal Harassement"
+      "publishedAt": "2020-10-02"
     },
     {
       "id": "2",
@@ -17,8 +16,7 @@
       "mobile_no": 1234567811,
       "location": "343,sector-32",
       "body": "This is the post body",
-      "publishedAt": "10-01-2020",
-      "category": "Domestic Violence"
+      "publishedAt": "10-01-2020"
     },
     {
       "id": "3",
@@ -27,8 +25,7 @@
       "mobile_no": 7658484478,
       "location": "3,sector-1",
       "body": "This is the post body",
-      "publishedAt": "10-01-2020",
-      "category": "Ragging"
+      "publishedAt": "10-01-2020"
     },
     {
       "name": "a",
@@ -37,8 +34,7 @@
       "location": "33,sector-9",
       "body": "This is the body for post 4",
       "publishedAt": "2020-10-06",
-      "id": "4",
-      "category": "Child Harrasement"
+      "id": "4"
     }
   ],
   "blockedusers": [
