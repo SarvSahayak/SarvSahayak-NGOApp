@@ -9,8 +9,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import data from '../data/db.json'
 
-
-export default function FormDialog() {
+export function FormDialog() {
     const [open, setOpen] = React.useState(false);
     const [email, setEmail] = React.useState('');
     const [emailError, setEmailError] = React.useState('');
@@ -25,6 +24,7 @@ export default function FormDialog() {
     const handleEmailChange = (function (e) {
         setEmail(e.target.value)
         validateEmail(e.target.value)
+        return e.target.value
     })
 
     const handlePasswordChange = (function (e) {

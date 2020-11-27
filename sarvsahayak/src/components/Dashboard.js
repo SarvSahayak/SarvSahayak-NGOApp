@@ -1,5 +1,5 @@
 import React from 'react'
-import { Admin, Resource, Title, Logout, Toolbar, SortButton, SelectInput } from 'react-admin'
+import { Admin, Resource, Title, Logout, Toolbar, SortButton, SelectInput} from 'react-admin'
 import { ReferenceInput } from 'react-admin';
 import restProvider from 'ra-data-simple-rest'
 import authProvider from './authProvider'
@@ -16,6 +16,8 @@ import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import PostShow from "./PostShow";
 import '../css/styles.css';
 import Main from './Main'
+// import { a } from './popup'
+import { FormDialog } from './popup'
 // <Title id= "main-title" title= "SarvSahayak"/>
 
 function dash() {

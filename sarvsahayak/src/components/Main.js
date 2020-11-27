@@ -1,7 +1,7 @@
 import React from "react";
 // import { Button } from '@material-ui/core';
 import '../css/styles.css'
-import  FormDialog  from '../components/popup'
+import  { FormDialog }  from '../components/popup'
 
 class Main extends React.Component{
     render(){
