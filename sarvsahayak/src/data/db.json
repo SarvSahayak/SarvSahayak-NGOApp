@@ -4,41 +4,41 @@
       "id": "1",
       "name": "sa",
       "email": "saks@gmail.com",
-      "title": "Post One",
+      "mobile_no": 9876453212,
       "location": "343,sector-19",
       "body": "This is the post body",
       "publishedAt": "2020-10-02",
-      "image": "logo.png"
+      "category": "Animal Harassement"
     },
     {
       "id": "2",
       "name": "ka",
       "email": "ks@gmail.com",
-      "title": "Post Two",
+      "mobile_no": 1234567811,
       "location": "343,sector-32",
       "body": "This is the post body",
       "publishedAt": "10-01-2020",
-      "image": "logo.png"
+      "category": "Domestic Violence"
     },
     {
       "id": "3",
       "name": "a",
       "email": "akss@gmail.com",
-      "title": "Post Three",
+      "mobile_no": 7658484478,
       "location": "3,sector-1",
       "body": "This is the post body",
       "publishedAt": "10-01-2020",
-      "image": "logo.png"
+      "category": "Ragging"
     },
     {
       "name": "a",
       "email": "aks@gmail.com",
-      "title": "Post Four",
+      "mobile_no": 7855775788,
       "location": "33,sector-9",
       "body": "This is the body for post 4",
       "publishedAt": "2020-10-06",
       "id": "DdCICG7",
-      "image": "logo.png"
+      "category": "Child Harrasement"
     }
   ],
   "blockedusers": [
