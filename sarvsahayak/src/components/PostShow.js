@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Show, SimpleShowLayout, TextField, DateField, RichTextField, ImageField, useMutation, useNotify, useRedirect, Button } from 'react-admin';
-import logo from "../photos/logo.png";
+import Ragging from "../photos/Ragging.jpg";
+import Ragging2 from "../photos/Ragging2.jpg";
 import '../css/styles.css';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import BackButton from "./BackButton";
@@ -9,6 +10,8 @@ import BackButton from "./BackButton";
 import { EditButton, TopToolbar } from 'react-admin';
 import MenuPopupState from "./statusupdate";
 import BlockButton from "./blockuserbutton";
+import SimpleMap from "./Map";
+
 
 
 // const PostTitle = ({ record }) => {
@@ -67,7 +70,8 @@ const PostShow = (props) => (
                 <TextField label="Mobile number" source="mobile_no" />
                 <RichTextField source="body" />
                 <DateField label="Publication date" source="publishedAt" />
-                <img src={logo} />
+                <img src={Ragging} />
+                <img src={Ragging2} />
             </SimpleShowLayout>
 
         </Show>

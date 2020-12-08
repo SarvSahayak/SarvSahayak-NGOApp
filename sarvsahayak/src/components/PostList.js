@@ -16,6 +16,7 @@ import BlockSharpIcon from '@material-ui/icons/BlockSharp';
 //import MoreButton from './application_stats'
 import CallReceivedIcon from '@material-ui/icons/CallReceived';
 import LineChart from "./linecharts";
+import SimpleMap from "./Map";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -29,7 +30,16 @@ const PostList = (props) => {
   const classes = useStyles();
   return (
     <>
-    
+    <SimpleMap
+        isMarkerShown
+        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `400px` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+    />
+    <br />
+    <LineChart />
+    <br />
     <List {...props}>
       <Datagrid rowClick="show">
         <TextField source='id' />
@@ -51,8 +61,8 @@ const PostList = (props) => {
       {/* <MoreButton></MoreButton> */}
       </Datagrid>
     </List>
-    <br/><br/>
-      <LineChart />
+    
+      
     </>
   )
 }
