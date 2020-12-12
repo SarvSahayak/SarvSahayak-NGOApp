@@ -12,7 +12,14 @@ import MenuPopupState from "./statusupdate";
 import BlockButton from "./blockuserbutton";
 import SimpleMap from "./Map";
 
-
+// <SimpleMap
+                // isMarkerShown
+                // googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                // loadingElement={<div style={{ height: `100%` }} />}
+                // containerElement={<div style={{ height: `400px` }} />}
+                // mapElement={<div style={{ height: `100%` }} />}
+                // />
+                //<br />
 
 // const PostTitle = ({ record }) => {
 //     return <span>{record ? `${record.category}` : ''}</span>;
@@ -72,6 +79,7 @@ const PostShow = (props) => (
                 <DateField label="Publication date" source="publishedAt" />
                 <img src={Ragging} />
                 <img src={Ragging2} />
+                
             </SimpleShowLayout>
 
         </Show>
