@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a6f5c8bd.chunk.css",
+    "main.js": "/static/js/main.51b99eb0.chunk.js",
+    "main.js.map": "/static/js/main.51b99eb0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2fe722b6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2fe722b6.js.map",
+    "static/js/2.146e078c.chunk.js": "/static/js/2.146e078c.chunk.js",
+    "static/js/2.146e078c.chunk.js.map": "/static/js/2.146e078c.chunk.js.map",
+    "static/js/3.6fd41a00.chunk.js": "/static/js/3.6fd41a00.chunk.js",
+    "static/js/3.6fd41a00.chunk.js.map": "/static/js/3.6fd41a00.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.a6f5c8bd.chunk.css.map": "/static/css/main.a6f5c8bd.chunk.css.map",
+    "static/js/2.146e078c.chunk.js.LICENSE.txt": "/static/js/2.146e078c.chunk.js.LICENSE.txt",
+    "static/media/Ragging.707d7de7.jpg": "/static/media/Ragging.707d7de7.jpg",
+    "static/media/Ragging2.10611c48.jpg": "/static/media/Ragging2.10611c48.jpg",
+    "static/media/index.css": "/static/media/logo.6edb8182.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2fe722b6.js",
+    "static/js/2.146e078c.chunk.js",
+    "static/css/main.a6f5c8bd.chunk.css",
+    "static/js/main.51b99eb0.chunk.js"
+  ]
+}
