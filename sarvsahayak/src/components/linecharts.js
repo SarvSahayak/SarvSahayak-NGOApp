@@ -13,10 +13,10 @@ const LineChart = () => {
         const empAge = [];
         const empSal = [];
         const ax = axios.create({
-            baseURL: "http://localhost:3000/"
+            baseURL: "https://sarvsahayakapi.herokuapp.com/ngos"
         })
 
-        ax.get("/messages")
+        ax.get("/complaints")
             .then(res => {
                 console.log(res)
                 for (const dataObj of res.data) {

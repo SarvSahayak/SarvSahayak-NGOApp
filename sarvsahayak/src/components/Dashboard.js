@@ -1,7 +1,7 @@
 import React from 'react'
-import { Admin, Resource, Title, Logout, Toolbar, SortButton, SelectInput} from 'react-admin'
+import { fetchUtils, Admin, Resource, Title, Logout, Toolbar, SortButton, SelectInput} from 'react-admin'
 import { ReferenceInput } from 'react-admin';
-import restProvider from 'ra-data-simple-rest'
+import simpleRestProvider from 'ra-data-simple-rest'
 import authProvider from './authProvider'
 import PostList from './PostList'
 import BlockList from './Blockedusers'
@@ -20,11 +20,20 @@ import Main from './Main'
 import { FormDialog } from './popup'
 // <Title id= "main-title" title= "SarvSahayak"/>
 
+const httpClient = (url, options = {}) => {
+  if (!options.headers) {
+    options.headers = new Headers({ Accept: 'application/json' });
+  }
+  const { token } = JSON.parse(localStorage.getItem('auth'));
+  options.headers.set('Authorization', `Bearer ${token}`);
+  return fetchUtils.fetchJson(url, options);
+};
+
 function dash() {
   return (
-    <Admin loginPage = {Main} dataProvider={restProvider('http://localhost:3000')}>
+    <Admin loginPage={Main} dataProvider={simpleRestProvider('https://sarvsahayakapi.herokuapp.com/ngos', httpClient)} authProvider={authProvider} >
       <Resource
-        name='messages'
+        name='complaints'
         list={PostList}
         show={PostShow} 
         // create={PostCreate}

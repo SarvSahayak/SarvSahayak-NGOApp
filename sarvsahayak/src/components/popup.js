@@ -31,6 +31,7 @@ export default function FormDialog(props) {
         .then(response => {
              console.log(response.status)
             localStorage.setItem("authToken", response.data.token)
+            window.location.assign("/dashboard")
         })
         .catch(err => console.log(err))
         
