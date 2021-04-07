@@ -7,82 +7,33 @@ import DialogContent from '@material-ui/core/DialogContent';
 // import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
-import data from '../data/db.json'
-import PropTypes from 'prop-types';
+//import data from '../data/db.json'
+//import PropTypes from 'prop-types';
 
-async function loginUser(credentials) {
-    return fetch("https://sarvsahayakapi.herokuapp.com/ngos/login", {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(credentials)
-    })
-        .then(data => data.json())
-}
-
-export default function FormDialog({ setToken }) {
+export default function FormDialog(props) {
     const [open, setOpen] = useState(false);
-    const [Email, setEmail] = useState();
-    const [password, setPassword] = useState();
-    // const [emailError, setEmailError] = React.useState('');
-    
-    // const [passwordError, setPasswordError] = React.useState('');
-    // const [submitError, setSubmitError] = React.useState('');
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleClickOpen = () => {
         setOpen(true);
     };
 
-    // const handleEmailChange = (function (e) {
-    //     setEmail(e.target.value)
-    //     validateEmail(e.target.value)
-    //     return e.target.value
-    // })
-
-    // const handlePasswordChange = (function (e) {
-    //     setPassword(e.target.value)
-    //     validatePassword(e.target.value)
-    // })    
-
-    // const validateEmail = (value) => {
-    //     const error = value ? "" : "You must enter your email address"
-    //     setEmailError(error)
-    //     return error
-    // }
-
-    // const validatePassword = (value) => {
-    //     const error = value ? "" : "You must enter your Password"
-    //     setPasswordError(error)
-    //     return error
-    // }    
-
-    // const validateSubmit = (value) => {
-    //     setSubmitError("Email entered is wrong")
-    // }
-
-    // const handleSubmit = (() => {
-    //     const emailValidationError = validateEmail(email)
-    //     const passwordValidationError = validatePassword(pwd)
-    //     if (emailValidationError === "" && passwordValidationError === "") {
-    //         const rightEmail = data.messages.find(function (message) {
-    //             return email === message.email
-    //         })
-    //         if (rightEmail !== undefined) {
-    //             window.location.assign('/dashboard')
-    //         } else {
-    //             validateSubmit()
-    //         }
-    //     } 
-    // })
-    const handleSubmit = async e => {
-        e.preventDefault();
-        const token = await loginUser({
-            Email,
+    const handleSubmit = () => {
+        const data = {
+            email,
             password
-        });
-        setToken(token);
-        window.location.assign('/dashboard')
+        }
+
+        const axios = require("axios");
+
+        axios.post('https://sarvsahayakapi.herokuapp.com/ngos/login', data)
+        .then(response => {
+             console.log(response.status)
+            localStorage.setItem("authToken", response.data.token)
+        })
+        .catch(err => console.log(err))
+        
     }
 
     return (
@@ -97,18 +48,22 @@ export default function FormDialog({ setToken }) {
                     <DialogContent>
                         <TextField
                             autoFocus
+                            autoComplete = "off"
                             margin="dense"
                             label="Email Address"
                             type="email"
-                            onChange = {e => setEmail(e.target.value)}
+                            value = {email}
+                            onChange = {(e) => setEmail(e.target.value)}
                             fullWidth
                             required
                         />
                         <TextField
                             margin="dense"
+                            autoComplete="off"
                             label="Password"
                             type="password"
-                            onChange = {e => setPassword(e.target.value)}
+                            value = {password}
+                            onChange = {(e) => setPassword(e.target.value)}
                             fullWidth
                             required
                         />
@@ -121,8 +76,4 @@ export default function FormDialog({ setToken }) {
             </Dialog>
         </div>
     );
-}
-
-FormDialog.propTypes = {
-    setToken: PropTypes.func.isRequired
 }
