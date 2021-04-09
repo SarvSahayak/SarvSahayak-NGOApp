@@ -71,43 +71,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 
 function dash() {
-<<<<<<< HEAD
   return (
-    <Admin loginPage={Main} dataProvider={simpleRestProvider('https://sarvsahayakapi.herokuapp.com/ngos', httpClient)} >
-      <Resource
-        name='complaints'
-        list={PostList}
-        show={PostShow} 
-        // create={PostCreate}
-        // edit={PostEdit}
-        />
-      {/* <Resource
-        name='users'
-        list={UserList}
-        // create={UserCreate}
-        edit={UserEdit}
-      /> */}
-      {/* <Resource
-        name='blocked Users'
-        list={UserList}
-        // create={UserCreate}
-        edit={UserEdit}
-      /> */}
-         <Resource name="blockedusers" list={BlockList} icon={UserIcon} />
-         <Resource name="Contact us" list={ContactList} icon={ContactSupportIcon}/>
-    </Admin>
+    <h1>Hello</h1>
   )
-}
-
-export default dash
-=======
-   return (
-    <Card>
-        <CardHeader title="Welcome to the administration" />
-        <CardContent>Lorem ipsum sic dolor amet...</CardContent>
-    </Card>
-)
    }
    
 export default dash;
->>>>>>> 939056986925ccbc0d3699d0160a74d05c48f763

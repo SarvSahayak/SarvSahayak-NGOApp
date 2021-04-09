@@ -8,8 +8,9 @@ import { PostList, PostEdit, PostCreate, PostShow } from './components/posts';
 import { UserList } from './components/users';
 import Dashboard from './components/Dashboard';
 import authProvider from './components/authProvider';
-
+import complaints from "./components/complaints";
 import MyLoginPage from './components/popup';
+import Error from "./components/Error";
 
 const httpClient = (url, options = {}) => {
   if (!options.headers) {
@@ -20,24 +21,26 @@ const httpClient = (url, options = {}) => {
   return fetchUtils.fetchJson(url, options);
 };
 const App = () => (
-    
-    <Admin 
+    <Admin
         dataProvider={jsonServerProvider(
-            'https://sarvsahayakapi.herokuapp.com/ngos/login'
-           , httpClient)}
+            'https://sarvsahayakapi.herokuapp.com/ngos'
+            , httpClient)}
         authProvider={authProvider}
-        dashboard={Dashboard}
+        
+        loginPage = {MyLoginPage}
     >
         <Resource
-            name="posts"
-            icon={PostIcon}
-            list={PostList}
-            edit={PostEdit}
-            create={PostCreate}
-            show={PostShow}
+            name="complaints"
+            list = {complaints}
+            //icon={PostIcon}
+            //list={PostList}
+            //edit={PostEdit}
+            //create={PostCreate}
+            //show={PostShow}
         />
         <Resource name="users" icon={UserIcon} list={UserList} />
         <Resource name="comments" list={ListGuesser} />
     </Admin>
 );
+  
 export default App;

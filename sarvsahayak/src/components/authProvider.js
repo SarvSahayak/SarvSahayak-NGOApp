@@ -29,7 +29,7 @@ const authProvider = {
                 return response.json();
             })
             .then(authToken => {
-                localStorage.setItem('authToken', JSON.stringify(authToken));
+                localStorage.setItem('authToken', authToken.token);
             })
             // .catch(() => {
             //     throw new Error('Network error')

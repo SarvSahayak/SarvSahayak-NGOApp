@@ -4,6 +4,7 @@ import {BrowserRouter} from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MyLoginPage from './components/popup';
 
 ReactDOM.render(
   <BrowserRouter>
