@@ -31,7 +31,7 @@ const httpClient = (url, options = {}) => {
 
 function dash() {
   return (
-    <Admin loginPage={Main} dataProvider={simpleRestProvider('https://sarvsahayakapi.herokuapp.com/ngos', httpClient)} authProvider={authProvider} >
+    <Admin loginPage={Main} dataProvider={simpleRestProvider('https://sarvsahayakapi.herokuapp.com/ngos', httpClient)} >
       <Resource
         name='complaints'
         list={PostList}
