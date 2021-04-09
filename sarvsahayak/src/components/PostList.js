@@ -36,9 +36,9 @@ const PostList = (props) => {
       <Datagrid rowClick="show">
         <TextField source='id' />
         <TextField source='name' />
-        <EmailField source="email" />
+        <EmailField source='email' />
         <TextField source='mobile_no' />
-        <TextField source="location" />
+        <TextField source='location' />
         <DateField source='publishedAt' />
         {/* <EditButton basePath='/posts' /> */}
         {/* <DeleteButton basePath='/posts' /> */}
