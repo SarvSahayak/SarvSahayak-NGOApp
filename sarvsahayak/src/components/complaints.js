@@ -58,7 +58,7 @@ const Complaints = (props) => {
     if (data) {
         return (
             <Card>
-                <Title title = "Complaints"/>
+                <Title title = "Complaintssss"/>
                 <CardContent>
            <table>
                 <thead>
@@ -90,6 +90,7 @@ const Complaints = (props) => {
            </table> 
             </CardContent>
         </Card>
+      
         )
     } 
     else {
