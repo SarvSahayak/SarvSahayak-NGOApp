@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from "react";
-import PostList from "./PostList";
+// import PostList from "./PostList";
 import '../css/complaints.css' 
 import { Title } from 'react-admin';
 import { Card, CardContent } from '@material-ui/core';

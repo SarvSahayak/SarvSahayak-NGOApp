@@ -3,20 +3,16 @@ import {
   List,
   Datagrid,
   TextField,
-  DateField,
-  EditButton,
-  EmailField,
-  DeleteButton,
 } from 'react-admin'
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 // import Icon from '@material-ui/core/Icon';
-import BlockSharpIcon from '@material-ui/icons/BlockSharp';
+// import BlockSharpIcon from '@material-ui/icons/BlockSharp';
 // import Show from "./PostShow"
 //import MoreButton from './application_stats'
-import CallReceivedIcon from '@material-ui/icons/CallReceived';
+// import CallReceivedIcon from '@material-ui/icons/CallReceived';
 import LineChart from "./linecharts";
-import SimpleMap from "./Map";
+// import SimpleMap from "./Map";
 import { useEffect, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
