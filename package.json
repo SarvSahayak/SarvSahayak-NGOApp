@@ -7,18 +7,11 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-<<<<<<< HEAD
-    "axios": "^0.21.0",
-    "chart.js": "^2.9.4",
-    "google-map-react": "^2.1.9",
-    "material-ui-popup-state": "^1.7.0",
-=======
     "axios": "^0.21.1",
     "chart.js": "^2.9.4",
     "google-map-react": "^2.1.9",
     "material-ui-popup-state": "^1.7.0",
     "ra-data-json-server": "^3.14.3",
->>>>>>> ea05aba0f7910a3b07de8d1cb609e13c0ef041e2
     "ra-data-simple-rest": "^3.9.1",
     "react": "^16.13.1",
     "react-admin": "^3.9.2",
