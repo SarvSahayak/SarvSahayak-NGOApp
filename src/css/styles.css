@@ -1,4 +1,4 @@
-#login-button {
+/* #login-button {
     text-align: center;
 }
 h1 {
@@ -55,7 +55,7 @@ input {
 }
 
 .MuiDialog-paperWidthSm {
-    /* max-width: 600px; */
+     max-width: 600px; 
     width: 400px;
 }
 #main-title {
@@ -65,4 +65,4 @@ input {
 #back {
     position: absolute;
     right: 1040px;
-}
+} */
