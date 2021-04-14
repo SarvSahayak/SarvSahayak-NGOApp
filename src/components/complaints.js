@@ -1,14 +1,15 @@
 import * as React from 'react';
 import { useEffect, useState } from "react";
 // import PostList from "./PostList";
-import '../css/complaints.css' 
+import '../css/complaints.css';
+import stytab from '../css/table.module.css';
 import { Title } from 'react-admin';
 import { Card, CardContent } from '@material-ui/core';
 
 const Complaints = (props) => {
     const [data, setData] = useState([]);
 
-    useEffect (() => {
+    useEffect(() => {
         const fetchData = async () => {
             const response = await fetch(`https://sarvsahayakapi.herokuapp.com/ngos/complaints`, {
                 method: "GET",
@@ -19,9 +20,9 @@ const Complaints = (props) => {
             });
             const newData = await response.json();
             newData.map(function (o) {
-                if (o.status === 0) 
+                if (o.status === 0)
                     o.status = "Created"
-                else if(o.status === 1)
+                else if (o.status === 1)
                     o.status = "In process"
                 else if (o.status === 2)
                     o.status = "Accepted"
@@ -36,62 +37,68 @@ const Complaints = (props) => {
                 else if (o.category === 4)
                     o.category = "Violence"
             })
+            // newData.map(function (o) {
+            //    var
+            // })
             setData(newData);
         };
         fetchData();
     })
 
-    const renderRows = () =>  {
+    const renderRows = () => {
         return data.map(function (o) {
-            return  <tr key = {"item-" + o._id}>
-                        <td>{o.description}</td>
-                        <td>{o.status}</td> 
-                        <td>{o.address}</td>
-                        <td>{o.category}</td>
-                        <td>{o.createdAt}</td>
-                        <td>{o.owner}</td>
-                        <td>{o.updatedAt}</td>
-                    </tr>
+            return <tr key={"item-" + o._id}>
+                <td>{o.description}</td>
+                <td>{o.status}</td>
+                <td>{o.address}</td>
+                <td>{o.category}</td>
+                <td>{o.createdAt}</td>
+                <td>{o.owner}</td>
+                <td>{o.updatedAt}</td>
+            </tr>
         })
     }
 
     if (data) {
         return (
             <Card>
-                <Title title = "Complaints"/>
+                <Title title="Complaints" />
                 <CardContent>
-           <table>
-                <thead>
-                    <th>
-                        Description
-                    </th>
-                    <th>
-                        Status
-                    </th>
-                    <th>
-                        Address
-                    </th>
-                    <th>
-                        Category
-                    </th>
-                    <th>
-                        CreatedAt
-                    </th>
-                    <th>
-                        Owner
-                    </th>
-                    <th>
-                        UpdatedAt
-                    </th>
-                </thead>
-                <tbody>
-                    {renderRows()}
-                </tbody>
-           </table> 
-            </CardContent>
-        </Card>
+                    <table className={stytab["styled-table"]}>
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Description
+                                </th>
+                                <th>
+                                    Application Status
+                                </th>
+                                <th>
+                                    Address
+                                </th>
+                                <th>
+                                    Category
+                                 </th>
+                                <th>
+                                    Registration At
+                                </th>
+                                <th>
+                                    Owner
+                                </th>
+                                <th>
+                                    Update At
+                                  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {renderRows()}
+                        </tbody>
+                    </table>
+                </CardContent>
+            </Card>
         )
-    } 
+    }
     else {
         return <div>Nothing</div>;
     }
