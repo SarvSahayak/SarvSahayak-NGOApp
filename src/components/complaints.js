@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 // import PostList from "./PostList";
 import '../css/complaints.css';
 import stytab from '../css/table.module.css';
-import { Title } from 'react-admin';
+import { number, Title } from 'react-admin';
 import { Card, CardContent } from '@material-ui/core';
 
 const Complaints = (props) => {
@@ -19,39 +19,37 @@ const Complaints = (props) => {
                 }
             });
             const newData = await response.json();
-            newData.map(function (o) {
-                if (o.status === 0)
-                    o.status = "Created"
-                else if (o.status === 1)
-                    o.status = "In process"
-                else if (o.status === 2)
-                    o.status = "Accepted"
-            })
-            newData.map(function (o) {
-                if (o.category === 1)
-                    o.category = "Child Harrasment"
-                else if (o.category === 2)
-                    o.category = "Domestic Violence"
-                else if (o.category === 3)
-                    o.category = "Abuse"
-                else if (o.category === 4)
-                    o.category = "Violence"
-            })
-            // newData.map(function (o) {
-            //    var
-            // })
             setData(newData);
         };
         fetchData();
     })
-
+    const statusNumToVal = (number) => {
+        if (number === 0)
+            number = "Created"
+        else if (number === 1)
+            number = "In process"
+        else if (number === 2)
+            number = "Accepted"
+        return number
+    }
+    const categoryNumToVal  = (number) => {
+        if (number === 1)
+            number = "Child Harrasment"
+        else if (number === 2)
+            number = "Domestic Violence"
+        else if (number=== 3)
+            number = "Abuse"
+        else if (number === 4)
+            number = "Violence"
+        return number
+    }
     const renderRows = () => {
         return data.map(function (o) {
             return <tr key={"item-" + o._id}>
                 <td>{o.description}</td>
-                <td>{o.status}</td>
+                <td>{statusNumToVal(o.status)}</td>
                 <td>{o.address}</td>
-                <td>{o.category}</td>
+                <td>{categoryNumToVal(o.category)}</td>
                 <td>{o.createdAt}</td>
                 <td>{o.owner}</td>
                 <td>{o.updatedAt}</td>
