@@ -1,6 +1,6 @@
 import * as React from 'react';
 import UserIcon from '@material-ui/icons/Group';
-import { fetchUtils, Admin, Resource, ListGuesser } from 'react-admin';
+import { fetchUtils, Admin, Resource} from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
 import authProvider from './components/authProvider';
 import complaints from "./components/complaints";
