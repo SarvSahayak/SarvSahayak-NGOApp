@@ -50,17 +50,6 @@ const Complaints = (props) => {
         return number
     }
 
-<<<<<<< HEAD
-    const statusValToNum = (val) => {
-        if (val === "created")
-            val = 0
-        else if (val === "inProcess")
-            val = 1
-        else if (val === "accepted")
-            val = 2
-        return val
-    }
-
     const handleChange = (e, id) => {
         e = e.target.value
         const url = 'https://sarvsahayakapi.herokuapp.com/ngos/complaints/' + encodeURIComponent(id)
@@ -81,8 +70,6 @@ const Complaints = (props) => {
         fetchData();
     }
 
-=======
->>>>>>> fcdfdd81e3ab4ac4419a5fcf85fb45e4381124e8
     const renderRows = () => {
         return data.map(function (o) {
             //setOption(statusNumToVal(o.status))
@@ -96,10 +83,6 @@ const Complaints = (props) => {
                     </select>
                 </td>
                 <td>{o.address}</td>
-<<<<<<< HEAD
-                <td> {categoryNumToVal(o.category)}</td>
-                <td>{o.createdAt}</td>
-=======
                 <td>{categoryNumToVal(o.category)}</td>
                 <td> {new Intl.DateTimeFormat('en-GB', {
                    year: 'numeric', 
@@ -109,7 +92,6 @@ const Complaints = (props) => {
                    minute: '2-digit', 
                    second: '2-digit'
                 }).format(new Date((o.createdAt)))}</td>
->>>>>>> fcdfdd81e3ab4ac4419a5fcf85fb45e4381124e8
                 <td>{o.owner}</td>
                 <td>
                 {new Intl.DateTimeFormat('en-GB', {
