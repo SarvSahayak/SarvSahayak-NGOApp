@@ -2,27 +2,33 @@ import * as React from 'react';
 import { useEffect, useState } from "react";
 import '../css/complaints.css';
 import stytab from '../css/table.module.css';
-import { number, Title } from 'react-admin';
+import { Title } from 'react-admin';
 import { Card, CardContent } from '@material-ui/core';
 
 
 const Complaints = (props) => {
     const [data, setData] = useState([]);
+    const statusData = [
+        {id: 0, status: 0},
+        {id: 1, status: 1},
+        {id: 2, status: 2}
+    ]
 
     useEffect(() => {
-        const fetchData = async () => {
-            const response = await fetch(`https://sarvsahayakapi.herokuapp.com/ngos/complaints`, {
-                method: "GET",
-                contentType: 'application/json',
-                headers: {
-                    Authorization: 'Bearer ' + localStorage.getItem('authToken')
-                }
-            });
-            const newData = await response.json();
-            setData(newData);
-        };
-        fetchData();
-    })
+            const fetchData = async () => {
+                const response = await fetch(`https://sarvsahayakapi.herokuapp.com/ngos/complaints`, {
+                    method: "GET",
+                    contentType: 'application/json',
+                    headers: {
+                        Authorization: 'Bearer ' + localStorage.getItem('authToken')
+                    }
+                });
+                const newData = await response.json();
+                setData(newData);
+            };
+            fetchData();
+        })
+
     const statusNumToVal = (number) => {
         if (number === 0)
             number = "Created"
@@ -44,11 +50,38 @@ const Complaints = (props) => {
         return number
     }
 
+    const handleChange = (e, id) => {
+        e = e.target.value
+        const url = 'https://sarvsahayakapi.herokuapp.com/ngos/complaints/' + encodeURIComponent(id)
+        const fetchData = async () => {
+            const response = await fetch(url, {
+                method: 'PATCH',
+                body: JSON.stringify({
+                    status: e
+                }),
+                headers: new Headers({
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer ' + localStorage.getItem('authToken')
+                })
+            });
+            const newData = await response.json();
+            console.log(newData)
+        };
+        fetchData();
+    }
+
     const renderRows = () => {
         return data.map(function (o) {
+            //setOption(statusNumToVal(o.status))
             return <tr key={"item-" + o._id}>
                 <td>{o.description}</td>
-                <td>{statusNumToVal(o.status)}</td>
+                <td>
+                    <select value = {o.status} onChange = {(e) => handleChange(e, o._id)}>
+                        {statusData.map((e) => {
+                            return <option key = {e.id} value= {e.status}>{statusNumToVal(e.status)}</option>
+                        })}
+                    </select>
+                </td>
                 <td>{o.address}</td>
                 <td>{categoryNumToVal(o.category)}</td>
                 <td> {new Intl.DateTimeFormat('en-GB', {
