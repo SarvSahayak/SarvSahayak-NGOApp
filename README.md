@@ -9,7 +9,7 @@ Sarvshayak is a client side appliction where complints filed by the user are dis
 
 Check it out: [SarvSahayak](https://ngosarvsahayak.netlify.app/#/login)
 
-Dummy Data to acces:\
+Dummy Data to access:\
 Email : 213@gmail.com\
 Password : test@123
 
@@ -20,17 +20,18 @@ Password : test@123
 * Heroku-api
   
 ## Deployment:
-   
-   Deployed on Netlify
-   
-   Working on GitHub Actions
+ 
+* Netlify
+* Working on Azure Static App
    
 ### `Project can be run locally :`
 
-1. git [clone](https://github.com/SarvSahayak/SarvSahayak-NGOApp.git)
-2. npm install
-3. npm start
-   
+```
+  git clone https://github.com/SarvSahayak/SarvSahayak-NGOApp.git
+  npm install
+  npm start  
+```
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
