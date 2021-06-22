@@ -18,4 +18,4 @@ RUN npm install ci --only=production
 COPY . ./
 
 # start app
-CMD ["dumb-init","node", "server.js"]
+CMD ["npm", "start"]
